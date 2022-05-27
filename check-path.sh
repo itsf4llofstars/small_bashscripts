@@ -11,12 +11,19 @@
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     clear
 cat << EOF
-Running this with a user path setup either this script in the path directory
-or a link from the path directory to this script will check to ensure your
-path is set. Path is set if script runs successfully.
+Run this script with either the script or a hard/symbolic link in the path
+directory. A successfull run means your path is correct.
 
-Calls: For scripts in the path
-$ <script_name>.sh [options]
+Example:
+With the script in the path directory:
+    $ ./check-path.sh
+
+With a hard/symbolic link:
+    $ linkname
+
+Calls: If script is in the path
+$ check-path.sh [option]
+$ linkname [option]
 
 options
     -h, --help  This help text.
@@ -24,13 +31,12 @@ EOF
     exit 0
 fi
 
-#: START CODE HERE
 clear
 echo
 
-printf "By reading this line of text your path is set correctly, provided you called this\n"
-printf "script from outside your path directory and either the script is in the path\n"
-printf "directory or there is a hard/symbolic link form the path to the script\n"
+printf "By reading these lines of text your path is set correctly, provided you called\n"
+printf "this script from outside your path directory and either the script is in the\n"
+printf "path directory or there is a hard/symbolic link form the path to the script\n"
 
 exit 0
 
