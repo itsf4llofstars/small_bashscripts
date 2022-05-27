@@ -31,7 +31,7 @@ if [ ! -z "$1" ]; then
     chmod 755 "$1"
 else
     clear
-    printf "\nNo filename given.\n"
+    printf "\nError: No filename given.\n"
     exit 1
 fi
 
