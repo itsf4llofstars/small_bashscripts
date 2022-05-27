@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-#: A boilerplate file for bash scripts.
 
-#: TITLE:      TITLE
-#: DATE:       YY/MM/DD ymd
+#: TITLE:      chmod.sh
+#: DATE:       22/05/26
 #: AUTHOR:     GitHub: itsf4llofstars
-#: VERSION:    0.0
-#: DESCRPTION: DESCRIPTION
-#: OPTIONS:    OPTIONS
+#: VERSION:    0.1
+#: DESCRPTION: Changes the permission of a file to exicutable
+#: OPTIONS:    -h, --help
 
 #: Display help text
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
@@ -14,15 +13,11 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
 cat << EOF
 Description
 
-$ man ./<script_name>.1 For a look at the man page, if a man page is available.
+Calls: If script not in the path
+$ ./chmod.sh [options]
 
-Calls: For scripts not in the path
-$ ./<script_name>.sh [options]
-$ man ./<script_name>.1
-
-Calls: For scripts in the path
-$ <script_name>.sh [options]
-$ man <script_name>.1
+Calls: If script in the path
+$ chmod.sh [options]
 
 options
     -h, --help  This help text.
