@@ -26,5 +26,9 @@ fi
 
 #: START CODE HERE
 clear
+echo
+
+printf "By reading this line of text your path is set correct, provided you called this\n"
+printf "script from a directory that does not hold this actuall script\n"
 
 exit 0
