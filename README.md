@@ -29,3 +29,5 @@ or
 Should result in a successful run. Be sure to test it from outside of your<br>
 path directory.<br>
 
+Run with -h or --help for a short help section.<br>
+
