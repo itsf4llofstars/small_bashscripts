@@ -1,0 +1,14 @@
+#!/bin/sh
+# vim syntax=sh
+#: A boilerplate file for bash cron and anacron scripts.
+
+#: TITLE:      TITLE
+#: DATE:       22/MM/DD ymd
+#: AUTHOR:     GitHub: itsf4llofstars
+#: VERSION:    0.0
+#: DESCRPTION: DESCRIPTION
+#: id:         ####A
+
+set -e
+
+exit 0
