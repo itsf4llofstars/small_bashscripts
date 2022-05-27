@@ -28,7 +28,9 @@ fi
 clear
 echo
 
-printf "By reading this line of text your path is set correct, provided you called this\n"
-printf "script from a directory that does not hold this actuall script\n"
+printf "By reading this line of text your path is set correctly, provided you called this\n"
+printf "script from outside your path directory and either the script is in the path\n"
+printf "directory or there is a hard/symbolic link form the path to the script\n"
 
 exit 0
+
