@@ -34,9 +34,7 @@ fi
 clear
 echo
 
-printf "By reading these lines of text your path is set correctly, provided you called\n"
-printf "this script from outside your path directory and either the script is in the\n"
-printf "path directory or there is a hard/symbolic link form the path to the script\n"
+printf "If reading these lines of text your path is set correctly.\n\n"
 
 exit 0
 
