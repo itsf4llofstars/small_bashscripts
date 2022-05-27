@@ -34,7 +34,7 @@ fi
 clear
 echo
 
-printf "If reading these lines of text your path is set correctly.\n\n"
+printf "If reading this line of text your path is set correctly.\n\n"
 
 exit 0
 
