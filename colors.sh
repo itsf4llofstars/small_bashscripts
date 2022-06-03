@@ -12,7 +12,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     clear
 cat << EOF
 Prints 256 colors of the 256 color pallete with each color represented
-by their number.
+by it's number.
 
 Calls:
 $ ./colors.sh [option]
