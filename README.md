@@ -3,6 +3,7 @@
 A collection of bash scripts to automate tasks<br>
 
 + check-path.sh
++ chmod.sh
 
 
 ### check-path.sh
@@ -30,4 +31,8 @@ Should result in a successful run. Be sure to test it from outside of your<br>
 path directory.<br>
 
 Run with -h or --help for a short help section.<br>
+
+### chmod.sh
+
+chmod.sh is currently in work.<br>
 
