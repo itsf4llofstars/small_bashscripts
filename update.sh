@@ -11,10 +11,10 @@ yes to any questions asking to continue. Based on cmd line entries
 the user can perform a upgrade, dist-upgrade, full-upgrade.
 
 Example:
-./update --dist
+./update.sh --dist
 
-No cmd line option performs a regular upgrade.
-
+No cmd line option performs a regular upgrade. Your Linux distro may prompt
+for your password.
 
 options
     -h, --help  This help text.
