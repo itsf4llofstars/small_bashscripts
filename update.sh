@@ -18,7 +18,7 @@ No cmd line option performs a regular upgrade.
 
 options
     -h, --help  This help text.
-    -u, --update upgrade
+    -u, --upgrade upgrade
     -d, --dist dist-upgrade
     -f, --full full-upgrade
 EOF
@@ -29,8 +29,15 @@ clear
 cd /
 
 sudo apt update -yy
-sudo apt upgrade -yy
-sudo apt dist-upgrade -yy
-sudo apt full-upgrade -yy
+
+if [ "$1" == "-u" ] || [ "$1" == "--upgrade" ]; then
+    sudo apt upgrade -yy
+elif [ "$1" == "-d" ] || [ "$1" == "--dist" ]; then
+    sudo apt dist-upgrade -yy
+elif [ "$1" == "-f" ] || [ "$1" == "--full" ]; then
+    sudo apt full-upgrade -yy
+else
+    sudo apt upgrade -yy
+fi
 
 printf "\nAll updates and upgrades have been completed.\n"
