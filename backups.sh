@@ -22,6 +22,7 @@ Calls: For scripts in the path
 $ backups.sh [options]
 
 options
+    directory   The name of the directory to be backed up
     -h, --help  This help text.
 EOF
     exit 0
@@ -29,6 +30,18 @@ fi
 
 clear
 
-echo "Test message"
+# Check if first command argument is not empty
+if [ -z "$1" ]; then
+    echo "A directory name is needed"
+    exit 1
+fi
+
+# Check if backup directory exists
+if [ -d "$HOME"/"$1" ]; then
+    echo "Directory exists"
+else
+    echo "Directory does not exist"
+    exit 1
+fi
 
 exit 0
