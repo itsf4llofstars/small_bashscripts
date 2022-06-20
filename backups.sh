@@ -6,7 +6,7 @@
 #: AUTHOR:     GitHub: itsf4llofstars
 #: VERSION:    0.1
 #: DESCRPTION: Bash script to backup files
-#: OPTIONS:    -h, --help
+#: OPTIONS:    -h, --help, directory
 
 #: Display help text
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
