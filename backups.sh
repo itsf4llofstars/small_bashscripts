@@ -23,7 +23,6 @@ $ backups.sh [options]
 
 options
     directory   The name of the directory to be backed up
-    filetype    The filetype extension to be backed up
     -h, --help  This help text.
 EOF
     exit 0
@@ -37,18 +36,21 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-# Check if second command argument is not empty
-if [ -z "$2" ]; then
-    echo "A filetype is needed"
-    exit 1
-fi
-
 # Check if backup directory exists
 if [ -d "$HOME"/"$1" ]; then
     ls "$HOME"/"$1"
-    read -p "Continue... " X
+    printf "\nEnter the file extension (leave blank for all files or q to quit): "
+    read file_ext
 
-    tar cvf "$HOME"/"$1"/"$2"-backup.tar "$HOME"/"$1"/*."$2"
+    if [ "$file_ext" == "q" ]; then
+        exit 0
+    elif [ -z "$file_ext" ]; then
+        file_ext="*"
+    fi
+
+    echo "$file_ext"
+
+    # tar cvf "$HOME"/"$1"/"$2"-backup.tar "$HOME"/"$1"/*."$2"
 else
     echo "Directory does not exist"
     exit 1
