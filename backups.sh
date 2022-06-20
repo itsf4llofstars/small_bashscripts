@@ -38,7 +38,10 @@ fi
 
 # Check if backup directory exists
 if [ -d "$HOME"/"$1" ]; then
+    # Show available file in directory
     ls "$HOME"/"$1"
+
+    # Ask what file extension should be backed up
     printf "\nEnter the file extension (leave blank for all files or q to quit): "
     read file_ext
 
@@ -48,9 +51,10 @@ if [ -d "$HOME"/"$1" ]; then
         file_ext="*"
     fi
 
-    echo "$file_ext"
+    tar --create --verbose --absolute-names --file="$HOME"/"$1"/"$file_ext"-backup.tar "$HOME"/"$1"/*."$2"
 
-    # tar cvf "$HOME"/"$1"/"$2"-backup.tar "$HOME"/"$1"/*."$2"
+    clear
+    ls -lhgGAF "$HOME"/"$1"
 else
     echo "Directory does not exist"
     exit 1
