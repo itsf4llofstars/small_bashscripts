@@ -48,7 +48,7 @@ if [ -d "$HOME"/"$1" ]; then
     if [ "$file_ext" == "q" ]; then
         exit 0
     elif [ -z "$file_ext" ]; then
-        file_ext="*"
+        file_ext="files"
     fi
 
     tar --create --verbose --absolute-names --file="$HOME"/"$1"/"$file_ext"-backup.tar "$HOME"/"$1"/*."$2"
